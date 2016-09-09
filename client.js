@@ -25,7 +25,7 @@ app.model({
 
 const mainView = (state, prev, send) => html`
   <main>
-    <h1>EVM</h1>
+    <h1>EVM 2 EWASM</h1>  transcompiles EVM bytecode to ewasm <br> <br>
     <textarea 
       rows="50"
       cols="50"
