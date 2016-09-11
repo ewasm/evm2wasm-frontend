@@ -1,12 +1,6 @@
 code {
-  float: left;
   white-space: pre;
-  height: 80%;
-  overflow-y: scroll;
   padding: 20px;
-}
-textarea {
-  float: left;
 }
 
 main,
@@ -15,4 +9,9 @@ html,
 body {
     height: 100%;
     overflow: hidden;
+}
+
+div {
+  float: left;
+  height: 85%;
 }
