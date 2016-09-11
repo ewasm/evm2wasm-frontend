@@ -1,17 +1,19 @@
 {
   "name": "wasm2evm-frontend",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "description": "as simpe front end for evm2wasm",
   "main": "index.js",
   "scripts": {
-    "build": "curl 'localhost:8080/client.js' > 'dist/client.js' && curl 'localhost:8080' > 'dist/index.html'"
+    "build": "curl 'localhost:8080/client.js' > 'dist/client.js' && curl 'localhost:8080' > 'dist/index.html'",
+    "start": "budo client.js -p 8080 --open"
   },
-  "author": "",
+  "author": "mjbecze <mb@ethereum.org>",
   "license": "GPL-3.0",
   "dependencies": {
+    "budo": "^9.1.0",
     "choo": "^3.3.0",
-    "sheetify": "^5.1.0",
-    "ethereumjs-util": "^4.5.0"
+    "ethereumjs-util": "^4.5.0",
+    "sheetify": "^5.1.0"
   },
   "browserify": {
     "transform": [
