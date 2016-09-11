@@ -40,12 +40,11 @@ app.model({
 const header = html`
   <header>
     <h1>EVM 2 EWASM</h1>
-    <span>transcompiles EVM bytecode to <a href='https://github.com/ewasm/design'>ewasm</a> with <a href='https://github.com/ewasm/evm2wasm/'>evm2wasm</a></span>
   </header>`
 
 const footer = html`
   <footer>
-    <a href="https://github.com/ewasm/evm2wasm-frontend">source</a> | <a href="https://github.com/ewasm/evm2wasm-frontend/issues">issues</a>
+   transcompiles EVM bytecode to <a href='https://github.com/ewasm/design'>ewasm</a> with <a href='https://github.com/ewasm/evm2wasm/'>evm2wasm</a> | <a href="https://github.com/ewasm/evm2wasm-frontend">source</a> | <a href="https://github.com/ewasm/evm2wasm-frontend/issues">issues</a>
   </footer>`
 
 const mainView = (state, prev, send) => html `

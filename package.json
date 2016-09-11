@@ -4,10 +4,10 @@
   "description": "as simpe front end for evm2wasm",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "curl 'localhost:8080/client.js' > 'dist/client.js' && curl 'localhost:8080' > 'dist/index.html'"
   },
   "author": "",
-  "license": "ISC",
+  "license": "GPL-3.0",
   "dependencies": {
     "choo": "^3.3.0",
     "sheetify": "^5.1.0",

@@ -1,6 +1,5 @@
 code {
   white-space: pre;
-  padding: 20px;
 }
 
 main,
@@ -13,10 +12,6 @@ body {
 
 div {
   float: left;
-}
-
-h1 {
-  display: inline-block;
 }
 
 main {
