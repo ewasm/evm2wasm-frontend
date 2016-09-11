@@ -1,7 +1,7 @@
 {
   "name": "wasm2evm-frontend",
   "version": "1.0.0",
-  "description": "",
+  "description": "as simpe front end for evm2wasm",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,10 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "choo": "^3.3.0",
-    "s-expression": "^3.0.3",
-    "sheetify": "^5.1.0"
-  },
-  "devDependencies": {
+    "sheetify": "^5.1.0",
     "ethereumjs-util": "^4.5.0"
   },
   "browserify": {

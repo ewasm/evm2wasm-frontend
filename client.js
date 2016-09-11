@@ -15,35 +15,47 @@ const scroll = sf`
   }`
 
 const demoEVMcode = '0x60606040526000357c010000000000000000000000000000000000000000000000000000000090048063771602F7146037576035565b005b60546004808035906020019091908035906020019091905050606A565b6040518082815260200191505060405180910390f35b6000818301905080505b9291505056'
-const demoWastCode = compileEVM(demoEVMcode, true)
+const demoWastCode = compileEVM(demoEVMcode, true, true)
 
 app.model({
   state: {
     evmCode: demoEVMcode,
     wastCode: demoWastCode,
-    inlineOps: true
+    inlineOps: true,
+    pprint: true
   },
   reducers: {
     compile: (data, state) => ({
       evmCode: data,
-      wastCode: compileEVM(data, state.inlineOps)
+      wastCode: compileEVM(data, state.inlineOps, state.pprint)
     }),
-    toggle: (data, state) => ({
-      inlineOps: !state.inlineOps
-    })
+    toggle: (data, state) => {
+      const update = {}
+      update[data] = !state[data]
+      return update
+    }
   }
 })
 
+const header = html`
+  <header>
+    <h1>EVM 2 EWASM</h1>
+    <span>transcompiles EVM bytecode to <a href='https://github.com/ewasm/design'>ewasm</a> with <a href='https://github.com/ewasm/evm2wasm/'>evm2wasm</a></span>
+  </header>`
+
 const mainView = (state, prev, send) => html `
   <main>
-    <h1>EVM 2 EWASM</h1>
     <div>
       <textarea rows="50"cols="50"onkeypress=${(e) => send('compile', e.target.value)}>${demoEVMcode}</textarea>
       <br>
       <input type="checkbox" checked=${state.inlineOps} onchange=${(e) => {
-        send('toggle')
+        send('toggle', 'inlineOps')
         send('compile', state.evmCode)
       }}></input>inline EVM opcodes
+      <input type="checkbox" checked=${state.pprint} onchange=${(e) => {
+        send('toggle', 'pprint')
+        send('compile', state.evmCode)
+      }}></input>pretty print
     </div>
     <div class=${scroll}>
       <code>${state.wastCode}</code>
@@ -55,11 +67,12 @@ app.router((route) => [
 ])
 
 const tree = app.start()
+document.body.appendChild(header)
 document.body.appendChild(tree)
 
-function compileEVM (evm, inlineOps) {
+function compileEVM (evm, inlineOps, pprint) {
   return evm2wasm.compileEVM(ethUtil.toBuffer(evm), {
     inlineOps: inlineOps,
-    pprint: true
+    pprint: pprint
   })
 }
