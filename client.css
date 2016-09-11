@@ -13,9 +13,12 @@ body {
 
 div {
   float: left;
-  height: 85%;
 }
 
 h1 {
   display: inline-block;
+}
+
+main {
+  height: 85%; 
 }

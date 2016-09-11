@@ -43,6 +43,11 @@ const header = html`
     <span>transcompiles EVM bytecode to <a href='https://github.com/ewasm/design'>ewasm</a> with <a href='https://github.com/ewasm/evm2wasm/'>evm2wasm</a></span>
   </header>`
 
+const footer = html`
+  <footer>
+    <a href="https://github.com/ewasm/evm2wasm-frontend">source</a> | <a href="https://github.com/ewasm/evm2wasm-frontend/issues">issues</a>
+  </footer>`
+
 const mainView = (state, prev, send) => html `
   <main>
     <div>
@@ -69,6 +74,7 @@ app.router((route) => [
 const tree = app.start()
 document.body.appendChild(header)
 document.body.appendChild(tree)
+document.body.appendChild(footer)
 
 function compileEVM (evm, inlineOps, pprint) {
   return evm2wasm.compileEVM(ethUtil.toBuffer(evm), {
