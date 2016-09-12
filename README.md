@@ -1,7 +1,7 @@
 # SYNOPSIS 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)  
 
-This is a front end for [evm2wasm](https://github.com/ewasm/evm2wasm). See it running [here](ewasm.github.io/evm2wasm-frontend/dist/)
+This is a front end for [evm2wasm](https://github.com/ewasm/evm2wasm). See it running [here](https://ewasm.github.io/evm2wasm-frontend/dist/)
 
 # DEVELOP
 0. clone and install with `npm install` 
