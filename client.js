@@ -50,7 +50,7 @@ const footer = html`
 const mainView = (state, prev, send) => html `
   <main>
     <div>
-      <textarea rows="50"cols="50"onkeypress=${(e) => send('compile', e.target.value)}>${demoEVMcode}</textarea>
+      <textarea rows="30"cols="50"onkeypress=${(e) => send('compile', e.target.value)}>${demoEVMcode}</textarea>
       <br>
       <input type="checkbox" checked=${state.inlineOps} onchange=${(e) => {
         send('toggle', 'inlineOps')
