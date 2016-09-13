@@ -76,7 +76,7 @@ document.body.appendChild(tree)
 document.body.appendChild(footer)
 
 function compileEVM (evm, inlineOps, pprint) {
-  return evm2wasm.compileEVM(ethUtil.toBuffer(evm), {
+  return evm2wasm.evm2wast(ethUtil.toBuffer(evm), {
     inlineOps: inlineOps,
     pprint: pprint
   })
