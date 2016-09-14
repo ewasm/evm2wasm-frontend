@@ -12,7 +12,6 @@
   "dependencies": {
     "budo": "^9.1.0",
     "choo": "^3.3.0",
-    "ethereumjs-util": "^4.5.0",
     "evm2wasm": "^0.0.0",
     "sheetify": "^5.1.0"
   },
