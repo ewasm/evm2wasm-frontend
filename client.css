@@ -7,15 +7,21 @@ main,
 div,
 html, 
 body {
-    height: 100%;
-    overflow: hidden;
-    font-family: monospace;
+  height: 100%;
+  overflow: hidden;
+  font-family: monospace;
 }
 
 div {
   float: left;
+  width: 50%;
 }
 
 main {
   height: 85%; 
+}
+
+textarea {
+  width: 90%;
+  height: 80%;
 }

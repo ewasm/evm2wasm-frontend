@@ -10,7 +10,6 @@ sf('./client.css', { global: true })
 const scroll = sf`
   :host {
     overflow: scroll;
-    width: 70%;
   }`
 
 const demoEVMcode = '0x60606040526000357c010000000000000000000000000000000000000000000000000000000090048063771602F7146037576035565b005b60546004808035906020019091908035906020019091905050606A565b6040518082815260200191505060405180910390f35b6000818301905080505b9291505056'
@@ -49,7 +48,7 @@ const footer = html`
 const mainView = (state, prev, send) => html `
   <main>
     <div>
-      <textarea rows="30"cols="50" onchange=${(e) => send('compile', e.target.value)}>${demoEVMcode}</textarea>
+      <textarea onchange=${(e) => send('compile', e.target.value)}>${demoEVMcode}</textarea>
       <br>
       <input type="checkbox" checked=${state.inlineOps} onchange=${(e) => {
         send('toggle', 'inlineOps')
