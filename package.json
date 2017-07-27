@@ -10,10 +10,10 @@
   "author": "mjbecze <mb@ethereum.org>",
   "license": "GPL-3.0",
   "dependencies": {
-    "budo": "^9.1.0",
-    "choo": "^3.3.0",
+    "budo": "^10.0.4",
+    "choo": "^5.6.2",
     "evm2wasm": "^0.0.0",
-    "sheetify": "^5.1.0"
+    "sheetify": "^6.1.0"
   },
   "browserify": {
     "transform": [
