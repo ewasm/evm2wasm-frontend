@@ -1,4 +1,6 @@
 # SYNOPSIS 
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/ewasm/evm2wasm-frontend.svg)](https://greenkeeper.io/)
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)  
 
 This is a front end for [evm2wasm](https://github.com/ewasm/evm2wasm). See it running [here](https://ewasm.github.io/evm2wasm-frontend/dist/)
